@@ -1,0 +1,116 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background color to the whole page */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+/* Style the main container */
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: linear-gradient(45deg, #f7f7f7, #e3e3e3);
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  height: 500px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  #todo-list {
+    height: auto;
+  }
+
+  #task-list {
+    margin-top: 20px;
+  }
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #007bff;
+}
+
+#clear-all-btn {
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 0.2px solid #ff0000;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #ff0000;
+}
+
+#todo-input {
+  width: 70%;
+  padding: 5px;
+  margin-right: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  outline: none;
+}
+
+#add-btn {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#task-list {
+  margin-top: 10px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 5px 0;
+  background: linear-gradient(45deg, #f7f7f7, #e3e3e3);
+  border-radius: 5px;
+}
+
+.task .text {
+  flex: 1;
+}
+
+.task .delete-btn {
+  color: #ff0000;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.task .delete-btn:hover {
+  transform: scale(1.2);
+}
